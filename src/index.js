@@ -7,6 +7,8 @@ import { BrowserRouter, Routes,Route } from 'react-router-dom';
 import Cabecalho from './componentes/Cabecalho/Cabecalho';
 import { ThemeProvider } from '@emotion/react';
 import meuTheme from './theme/meuTheme';
+import Produto from './Produto';
+import Cadastrar from './Cadastrar';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -33,8 +35,8 @@ root.render(
         <Cabecalho/>
         <Routes>
           <Route path='/home' element={<Home />}/>
-          <Route path='/produto' element={<h1>Produto</h1>}/>
-          <Route path='/cadastrarproduto' element={<h1>Cadastrar</h1>}/>
+          <Route path='/produto' element={<Produto/>}/>
+          <Route path='/cadastrarproduto' element={<Cadastrar/>}/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
