@@ -24,7 +24,6 @@ const ProdutosContainer = styled.section`
 const CardProdutosContainer = styled.div`
     display: flex;
     width: 100%;
-    justify-content: center;
     gap:20px;
 `
 const Pesquisa = styled.div`
@@ -71,7 +70,7 @@ function Produtos(){
                             precoProduto={produto.preco}
                             descricaoProduto={produto.descricao}
                             imgProduto={produto.img}
-                            corNomeProduto={"white"}
+                            corNomeProduto={"black"}
                         />
                     ))
                 }
@@ -80,3 +79,4 @@ function Produtos(){
     );
 }
 export default Produtos;
+

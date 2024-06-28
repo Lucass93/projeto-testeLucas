@@ -8,10 +8,12 @@ const CardProdutoContainer = styled.div`
     justify-content: center;
     height: 300px;
     width: 250px;
-    background-color: gray;
+    background-color: white;
     box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-    border-radius: 10px;    
+    border-radius: 10px; 
+    border: 5px solid black;
 `
+
 const NomeProduto = styled.h3`
     color: ${props => props.corNomeProduto || "blue"};
 `
@@ -37,7 +39,7 @@ function CardProduto({
             <NomeProduto corNomeProduto = {corNomeProduto}>{nomeProduto}</NomeProduto>
             <PrecoProduto>{precoProduto}</PrecoProduto>
             <DescricaoProduto>{descricaoProduto}</DescricaoProduto>                   
-        </CardProdutoContainer>
+        </CardProdutoContainer>      
     );
 }
 export default CardProduto;
