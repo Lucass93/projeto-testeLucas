@@ -57,7 +57,7 @@ function Cadastrar ({
                         id="combo-box-demo"
                         options={marcasChuteiras}
                         sx={{ 
-                            width: 300,
+                            width: 310,
                             borderColor: "white",
                         }}
                         renderInput={(params) => <TextField {...params} label="Marcas" />}
