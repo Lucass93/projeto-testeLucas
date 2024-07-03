@@ -20,24 +20,48 @@ height:90vh;
 display: flex;
 flex-direction: column;
 align-items: center;
+
 `
 const NomeCadastro = styled.div `
-    margin-top: 20px;
-    color: white;
-    background-color: red;
-    height: 5vh;
-    display: flex;
-    flex-direction: column;
+margin-top: 15px;
+color: white;
+background-color: red;
+height: 5vh;
+display: flex;
+flex-direction: column;
 
 `
 const Fornecedor = styled.div `
  color: black;
- margin-top: 20px;
+ margin-top: 15px;
  display: flex;
  flex-direction: column;
  height: 5vh;
  align-items: center;
 `
+
+const Descricao = styled.div `
+margin-top: 15px;
+display: flex;
+flex-direction: column;
+align-items: center; 
+
+`
+const Preco = styled.div `
+margin-top: 15px;
+display: flex;
+flex-direction: column;
+height: 5vh;
+align-items: center;   
+`
+
+const FretePagamento = styled.div `
+margin-top: 15px;
+`
+
+
+
+
 function Cadastrar ({ 
     
             nomeCadastro}) {
@@ -45,13 +69,13 @@ function Cadastrar ({
     return (
         <CadastrarConteiner> 
              <NomeCadastro>
-                <h2>Pesquise seu produto aqui</h2>
+                <h3>Pesquise seu produto aqui</h3>
                 <input 
                     placeholder="Digite o produto" 
                 />
                 
                 <Fornecedor>
-                    <h2>Fornecedores</h2>
+                    <h3>Fornecedores</h3>
                     <Autocomplete
                         disablePortal
                         id="combo-box-demo"
@@ -62,8 +86,41 @@ function Cadastrar ({
                         }}
                         renderInput={(params) => <TextField {...params} label="Marcas" />}
                     />
-                </Fornecedor>
+                    <Descricao>
+                        <h3> Descrição </h3>
+                      <input
+                        placeholder="Descreva o Produto"
+                      />
+                    
+                    <Preco>
+                        <h3> Preço </h3>
+                        <input/>
+
+                    <FretePagamento> 
+                    <label> Frete gratis </label>
+                    <input type = "radio" /> 
+                    <label> Calcular Frete </label>
+                    <input type = "radio"/> <br/>
+                    <br/>         
+                    <label>  Boleto </label> 
+                    <input type = "checkbox" /> 
+                    <label> Pix </label>
+                    <input type = "checkbox" />  
+                    <label> Cartão </label>
+                    <input type = "checkbox" /> <br/>
+                    <br/>    
+                    <label> Garantia </label>
+                    <input type = "radio" /> <br/>  
+                    <br/>  
+                    <label> Quantidade em estoque </label> <br/> 
+                    <input type = "number" />
+
+                    </FretePagamento>
+                    </Preco>
+                    </Descricao>
+                </Fornecedor>  
                 </NomeCadastro>
+                
         </CadastrarConteiner>
     );
 }
